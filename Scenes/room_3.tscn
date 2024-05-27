@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpjwxjnarsj7t"]
+
+[ext_resource type="MeshLibrary" uid="uid://ixy0tpubfryo" path="res://Imported Assets/Dungeon/dungeon_mesh_library.tres" id="1_jykk1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2xa5k"]
+
+[node name="Room" type="Node3D"]
+
+[node name="Structure" type="GridMap" parent="."]
+mesh_library = ExtResource("1_jykk1")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(0, 3, 1048698, 0, 65535, 1048699, 65532, 65535, 1048699, 4, 65535, 1048699, 65528, 65535, 1048699, 8, 65535, 1048699, 8, 65531, 1048699, 4, 65531, 1048699, 0, 65531, 1048699, 65532, 65531, 1048699, 65528, 65531, 1048699, 65528, 65527, 1048699, 65532, 65527, 1048699, 65532, 65523, 1048699, 65528, 65523, 1048699, 65526, 65533, 1048640, 65526, 1, 655427, 65526, 65529, 1048638, 65524, 65529, 1048689, 65526, 65525, 1048640, 0, 1, 56, 65530, 1, 44, 6, 1, 64, 10, 1, 1441843, 65526, 65521, 1048627, 65534, 65521, 51, 10, 65529, 51, 65534, 65529, 655411, 65530, 65521, 655406, 65534, 65525, 1048622, 10, 65533, 1048640, 6, 65529, 64, 2, 65529, 65)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="Decor" type="GridMap" parent="."]
+mesh_library = ExtResource("1_jykk1")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(65534, 0, 655513, 65530, 65523, 1048722, 8, 65533, 1441870, 65528, 65535, 1048658, 3, 65535, 655512)
+}
+
+[node name="Ceiling" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 5, -6.5)
+cast_shadow = 3
+use_collision = true
+collision_layer = 2
+size = Vector3(21, 1, 17)
+material = SubResource("StandardMaterial3D_2xa5k")

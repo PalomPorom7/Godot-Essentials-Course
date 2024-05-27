@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://blfhc806kuw0e"]
+
+[ext_resource type="MeshLibrary" uid="uid://ixy0tpubfryo" path="res://Imported Assets/Dungeon/dungeon_mesh_library.tres" id="1_kc40b"]
+[ext_resource type="PackedScene" uid="uid://ioim4tdr1p6q" path="res://Imported Assets/Dungeon/pillar.gltf.glb" id="2_yqex7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6dn7v"]
+
+[node name="Room" type="Node3D"]
+
+[node name="Structure" type="GridMap" parent="."]
+mesh_library = ExtResource("1_kc40b")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(0, 4, 1441914, 0, 2, 56, 2, 4, 1441849, 65534, 4, 1441849, 6, 2, 655404, 65530, 2, 655413, 65526, 2, 655414, 10, 2, 655427, 0, 0, 655473, 65528, 0, 655474, 0, 65530, 655469, 8, 0, 655473, 3, 1, 655479, 5, 65531, 655480, 65535, 65525, 655480, 1, 65525, 655481, 65531, 65529, 655481, 8, 65532, 114, 3, 65535, 655477, 5, 1, 655476, 5, 65533, 655475, 5, 65535, 655475, 65531, 65527, 1441890, 65533, 65525, 1441890, 65535, 65523, 1441890, 65529, 65529, 1441890, 65527, 65531, 1441890, 65528, 65526, 1441886, 65532, 65522, 1441792, 65531, 65525, 1441887, 65527, 65529, 1441888, 65535, 65521, 1441889, 1, 65521, 1441890, 65528, 65522, 1048670, 65530, 65532, 1048689, 65527, 65533, 1048691, 1, 65523, 1048691, 4, 65522, 1048690, 3, 65525, 1048695, 7, 65521, 1048693, 5, 65525, 1048692, 9, 65529, 1048692, 6, 65528, 1048689, 8, 65524, 1048689, 9, 65521, 1048692, 9, 65527, 1048691, 10, 65534, 1048640, 10, 65530, 1048638, 12, 65530, 1048699, 10, 65526, 1048640, 0, 65520, 70, 4, 65520, 64, 65526, 65534, 1048641, 10, 65524, 1048635, 10, 65520, 51, 6, 65520, 59, 65526, 65530, 1441840, 65526, 65526, 1048637, 65526, 65524, 1441853, 65526, 65520, 1048625, 65532, 65520, 53, 65528, 65520, 59, 65527, 65525, 1441922, 8, 65526, 147, 65532, 0, 655473, 7, 0, 1441938, 65534, 1, 1441945, 7, 65522, 126, 65531, 65522, 82)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="pillar_gltf" parent="." instance=ExtResource("2_yqex7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -5.5)
+
+[node name="Ceiling" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 5, -6.5)
+cast_shadow = 3
+use_collision = true
+collision_layer = 2
+size = Vector3(21, 1, 19)
+material = SubResource("StandardMaterial3D_6dn7v")

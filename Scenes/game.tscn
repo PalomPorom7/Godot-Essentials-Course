@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/player.gd" id="2_16ona"]
 [ext_resource type="PackedScene" uid="uid://dsgxki7n5lrmk" path="res://Scenes/character.tscn" id="3_2iql4"]
 [ext_resource type="Script" path="res://Scripts/spring_arm.gd" id="3_u51m3"]
-[ext_resource type="PackedScene" uid="uid://dujtkfkjn3agj" path="res://Scenes/dungeon.tscn" id="4_bimas"]
+[ext_resource type="PackedScene" uid="uid://cpjwxjnarsj7t" path="res://Scenes/room_3.tscn" id="4_6rjyj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7hssf"]
 
@@ -15,7 +15,8 @@ _character = NodePath("../CharacterBody3D")
 _spring_arm = NodePath("../CharacterBody3D/SpringArm3D")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("3_2iql4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29044, 0.621913, -5.84324)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0143223, 0.5, -4.0749)
+collision_mask = 3
 
 [node name="SpringArm3D" type="SpringArm3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.70044, 0)
@@ -26,4 +27,28 @@ script = ExtResource("3_u51m3")
 [node name="Camera" type="Camera3D" parent="CharacterBody3D/SpringArm3D"]
 h_offset = 1.0
 
-[node name="Dungeon" parent="." instance=ExtResource("4_bimas")]
+[node name="Lighting" type="Node3D" parent="."]
+
+[node name="Ambience1" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 0, 10, 0)
+light_energy = 0.05
+
+[node name="Ambience2" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(-0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, 0.5, -0.5, 0, 10, 0)
+light_energy = 0.1
+
+[node name="Ambience3" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0.5, -0.5, 0, 10, 0)
+light_energy = 0.15
+
+[node name="Ambience4" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, 0, 10, 0)
+light_energy = 0.2
+
+[node name="Sunlight" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(0.866025, 0.12941, -0.482963, 0, 0.965926, 0.258819, 0.5, -0.224144, 0.836516, 0, 10, 0)
+light_color = Color(1, 0.74902, 0.247059, 1)
+light_energy = 2.0
+shadow_enabled = true
+
+[node name="Room" parent="." instance=ExtResource("4_6rjyj")]
