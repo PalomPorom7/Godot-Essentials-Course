@@ -10,4 +10,4 @@ func toggle_pause():
 		_pause_menu.close()
 
 func _on_exit_pressed():
-	print("Return to the title scene.")
+	get_tree().change_scene_to_file("res://Scenes/title.tscn")

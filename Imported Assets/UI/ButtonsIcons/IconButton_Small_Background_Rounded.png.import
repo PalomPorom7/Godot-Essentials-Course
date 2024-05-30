@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cm6ob8k7u4snb"
+path="res://.godot/imported/IconButton_Small_Background_Rounded.png-0a6662216b0b8ae646022b5cba7af462.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Imported Assets/UI/ButtonsIcons/IconButton_Small_Background_Rounded.png"
+dest_files=["res://.godot/imported/IconButton_Small_Background_Rounded.png-0a6662216b0b8ae646022b5cba7af462.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

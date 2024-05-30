@@ -1,8 +1,8 @@
+TextureRect
 VBoxContainer
 Button
 Label
 CanvasLayer
-TextureRect
 GridMap
 WorldEnvironment
 Node3D

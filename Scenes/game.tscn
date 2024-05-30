@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dil80q73hnvbt"]
+[gd_scene load_steps=9 format=3 uid="uid://dil80q73hnvbt"]
 
 [ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_8pybo"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="2_16ona"]
 [ext_resource type="PackedScene" uid="uid://dsgxki7n5lrmk" path="res://Scenes/character.tscn" id="3_2iql4"]
 [ext_resource type="Script" path="res://Scripts/spring_arm.gd" id="3_u51m3"]
 [ext_resource type="PackedScene" uid="uid://cpjwxjnarsj7t" path="res://Scenes/room_3.tscn" id="4_6rjyj"]
+[ext_resource type="Theme" uid="uid://b1vv3jre6npvq" path="res://menu_buttons.tres" id="6_1b651"]
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="6_dr2w1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7hssf"]
@@ -73,6 +74,7 @@ offset_right = 39.5
 offset_bottom = 46.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("6_1b651")
 script = ExtResource("6_dr2w1")
 _default_focus_item = NodePath("Continue")
 

@@ -1,9 +1,5 @@
-res://Scenes/character.tscn
 res://Imported Assets/Dungeon/dungeon_mesh_library.tres
+res://Scenes/title.tscn
+res://Scripts/title_manager.gd
 res://Scenes/game.tscn
-res://Scenes/room_1.tscn
-res://Scenes/room_2.tscn
-res://Scenes/room_3.tscn
-res://Scripts/player.gd
 res://Scripts/game_manager.gd
-res://Scripts/menu.gd
