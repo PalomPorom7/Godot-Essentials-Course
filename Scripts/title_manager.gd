@@ -1,11 +1,14 @@
 extends Node
 
 @onready var _menu_buttons : Control = $"Menu Buttons"
+@onready var _fade : ColorRect = $Fade
 
 func _ready():
+	_fade.to_clear(2) # await optional
 	_menu_buttons.open()
 
 func _on_new_game_pressed():
+	await _fade.to_black()
 	get_tree().change_scene_to_file("res://Scenes/game.tscn")
 
 func _on_continue_pressed():

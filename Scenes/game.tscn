@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dil80q73hnvbt"]
+[gd_scene load_steps=10 format=3 uid="uid://dil80q73hnvbt"]
 
 [ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_8pybo"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="2_16ona"]
@@ -6,7 +6,8 @@
 [ext_resource type="Script" path="res://Scripts/spring_arm.gd" id="3_u51m3"]
 [ext_resource type="PackedScene" uid="uid://cpjwxjnarsj7t" path="res://Scenes/room_3.tscn" id="4_6rjyj"]
 [ext_resource type="Theme" uid="uid://b1vv3jre6npvq" path="res://menu_buttons.tres" id="6_1b651"]
-[ext_resource type="Script" path="res://Scripts/menu.gd" id="6_dr2w1"]
+[ext_resource type="Script" path="res://Scripts/UI/menu.gd" id="6_dr2w1"]
+[ext_resource type="Script" path="res://Scripts/UI/fade.gd" id="8_v3vli"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7hssf"]
 
@@ -90,6 +91,18 @@ text = "Continue"
 [node name="Exit" type="Button" parent="UI/Pause Menu"]
 layout_mode = 2
 text = "Exit"
+
+[node name="Fade" type="ColorRect" parent="UI"]
+process_mode = 3
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("8_v3vli")
 
 [connection signal="pressed" from="UI/Pause Menu/Continue" to="." method="toggle_pause"]
 [connection signal="pressed" from="UI/Pause Menu/Exit" to="." method="_on_exit_pressed"]
