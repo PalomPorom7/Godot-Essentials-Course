@@ -7,8 +7,7 @@ func _ready():
 	_menu_buttons.open()
 
 func _on_new_game_pressed():
-	await _fade.to_black()
-	get_tree().change_scene_to_file("res://Scenes/game.tscn")
+	change_scenes("res://Scenes/game.tscn")
 
 func _on_continue_pressed():
 	print("Load autosave file.")

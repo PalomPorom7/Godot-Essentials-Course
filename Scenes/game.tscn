@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dil80q73hnvbt"]
+[gd_scene load_steps=11 format=3 uid="uid://dil80q73hnvbt"]
 
 [ext_resource type="Script" path="res://Scripts/Managers/game_manager.gd" id="1_8pybo"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="2_16ona"]
+[ext_resource type="AudioStream" uid="uid://dkndo7fbo3mbi" path="res://Imported Assets/Music/When the old Time ends.ogg" id="2_43nj3"]
 [ext_resource type="PackedScene" uid="uid://dsgxki7n5lrmk" path="res://Scenes/character.tscn" id="3_2iql4"]
 [ext_resource type="Script" path="res://Scripts/spring_arm.gd" id="3_u51m3"]
 [ext_resource type="PackedScene" uid="uid://cpjwxjnarsj7t" path="res://Scenes/room_3.tscn" id="4_6rjyj"]
@@ -13,6 +14,7 @@
 
 [node name="Game" type="Node3D" node_paths=PackedStringArray("_fade")]
 script = ExtResource("1_8pybo")
+_background_music = ExtResource("2_43nj3")
 _fade = NodePath("UI/Fade")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("3_2iql4")]

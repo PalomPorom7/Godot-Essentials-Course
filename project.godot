@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 File="*res://Scripts/Autoloads/file.gd"
+Music="*res://Scripts/Autoloads/music.gd"
 
 [display]
 
