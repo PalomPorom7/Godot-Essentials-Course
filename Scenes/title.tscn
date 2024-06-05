@@ -1,13 +1,13 @@
 [gd_scene load_steps=7 format=3 uid="uid://bq6l4iv6x8qa2"]
 
-[ext_resource type="Script" path="res://Scripts/title_manager.gd" id="1_325n5"]
+[ext_resource type="Script" path="res://Scripts/Managers/title_manager.gd" id="1_325n5"]
 [ext_resource type="Texture2D" uid="uid://dcbx4a403rnq4" path="res://Imported Assets/background.jpg" id="2_1cvys"]
 [ext_resource type="Script" path="res://Scripts/UI/menu.gd" id="2_6357k"]
 [ext_resource type="FontFile" uid="uid://cal1olhubng48" path="res://Imported Assets/Fonts/Celtica-Book.ttf" id="3_nyvpv"]
 [ext_resource type="Theme" uid="uid://b1vv3jre6npvq" path="res://menu_buttons.tres" id="4_jbwlq"]
 [ext_resource type="Script" path="res://Scripts/UI/fade.gd" id="6_67a7l"]
 
-[node name="Title" type="Control"]
+[node name="Title" type="Control" node_paths=PackedStringArray("_fade")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,6 +15,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_325n5")
+_fade = NodePath("Fade")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1

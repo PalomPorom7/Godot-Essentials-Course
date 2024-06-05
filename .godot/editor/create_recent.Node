@@ -1,3 +1,4 @@
+AudioStreamPlayer
 ColorRect
 TextureRect
 VBoxContainer
@@ -12,4 +13,3 @@ CSGBox3D
 OmniLight3D
 RigidBody3D
 StaticBody3D
-SpringArm3D

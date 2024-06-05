@@ -1,7 +1,6 @@
-res://Scenes/title.tscn
+res://Scenes/game.tscn
 res://Imported Assets/Dungeon/dungeon_mesh_library.tres
 res://menu_buttons.tres
-res://Scenes/game.tscn
-res://Scripts/UI/fade.gd
-res://Scripts/game_manager.gd
-res://Scripts/title_manager.gd
+res://Scripts/Managers/game_manager.gd
+res://Scripts/Managers/scene_manager.gd
+res://Scripts/Managers/title_manager.gd

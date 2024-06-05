@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dil80q73hnvbt"]
 
-[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_8pybo"]
+[ext_resource type="Script" path="res://Scripts/Managers/game_manager.gd" id="1_8pybo"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="2_16ona"]
 [ext_resource type="PackedScene" uid="uid://dsgxki7n5lrmk" path="res://Scenes/character.tscn" id="3_2iql4"]
 [ext_resource type="Script" path="res://Scripts/spring_arm.gd" id="3_u51m3"]
@@ -11,8 +11,9 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7hssf"]
 
-[node name="Game" type="Node3D"]
+[node name="Game" type="Node3D" node_paths=PackedStringArray("_fade")]
 script = ExtResource("1_8pybo")
+_fade = NodePath("UI/Fade")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("3_2iql4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0143223, 0.5, -4.0749)
