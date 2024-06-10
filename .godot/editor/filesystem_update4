@@ -1,5 +1,10 @@
-res://Scenes/game.tscn
+res://Scenes/title.tscn
 res://Imported Assets/Dungeon/dungeon_mesh_library.tres
 res://menu_buttons.tres
-res://Scripts/Autoloads/music.gd
-res://Scenes/title.tscn
+res://Scripts/UI/menu.gd
+res://Scripts/UI/settings_menu.gd
+res://Scenes/game.tscn
+res://Scripts/Managers/game_manager.gd
+res://Scripts/Managers/scene_manager.gd
+res://Scripts/Managers/title_manager.gd
+res://Scenes/settings_menu.tscn

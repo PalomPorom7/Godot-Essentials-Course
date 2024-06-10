@@ -1,6 +1,7 @@
 class_name SceneManager extends Node
 
 @export var _background_music : AudioStream
+@export var _settings_menu : Menu
 @export var _fade : ColorRect
 
 func _ready():

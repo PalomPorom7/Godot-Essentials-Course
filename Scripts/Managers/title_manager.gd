@@ -13,7 +13,7 @@ func _on_continue_pressed():
 	print("Load autosave file.")
 
 func _on_settings_pressed():
-	print("Display settings menu.")
+	_settings_menu.open(_menu_buttons)
 
 func _on_credits_pressed():
 	print("Display credits.")

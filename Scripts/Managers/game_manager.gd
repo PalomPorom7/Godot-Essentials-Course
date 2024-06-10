@@ -11,3 +11,6 @@ func toggle_pause():
 
 func _on_exit_pressed():
 	change_scenes("res://Scenes/title.tscn")
+
+func _on_settings_pressed():
+	_settings_menu.open(_pause_menu)

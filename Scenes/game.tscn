@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dil80q73hnvbt"]
+[gd_scene load_steps=12 format=3 uid="uid://dil80q73hnvbt"]
 
 [ext_resource type="Script" path="res://Scripts/Managers/game_manager.gd" id="1_8pybo"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="2_16ona"]
@@ -9,12 +9,14 @@
 [ext_resource type="Theme" uid="uid://b1vv3jre6npvq" path="res://menu_buttons.tres" id="6_1b651"]
 [ext_resource type="Script" path="res://Scripts/UI/menu.gd" id="6_dr2w1"]
 [ext_resource type="Script" path="res://Scripts/UI/fade.gd" id="8_v3vli"]
+[ext_resource type="PackedScene" uid="uid://cjk5t1el4suya" path="res://Scenes/settings_menu.tscn" id="9_iopaj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7hssf"]
 
-[node name="Game" type="Node3D" node_paths=PackedStringArray("_fade")]
+[node name="Game" type="Node3D" node_paths=PackedStringArray("_settings_menu", "_fade")]
 script = ExtResource("1_8pybo")
 _background_music = ExtResource("2_43nj3")
+_settings_menu = NodePath("UI/Settings Menu")
 _fade = NodePath("UI/Fade")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("3_2iql4")]
@@ -91,9 +93,16 @@ horizontal_alignment = 1
 layout_mode = 2
 text = "Continue"
 
+[node name="Settings" type="Button" parent="UI/Pause Menu"]
+layout_mode = 2
+text = "Settings"
+
 [node name="Exit" type="Button" parent="UI/Pause Menu"]
 layout_mode = 2
 text = "Exit"
+
+[node name="Settings Menu" parent="UI" instance=ExtResource("9_iopaj")]
+visible = false
 
 [node name="Fade" type="ColorRect" parent="UI"]
 process_mode = 3
@@ -108,4 +117,5 @@ color = Color(0, 0, 0, 1)
 script = ExtResource("8_v3vli")
 
 [connection signal="pressed" from="UI/Pause Menu/Continue" to="." method="toggle_pause"]
+[connection signal="pressed" from="UI/Pause Menu/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="UI/Pause Menu/Exit" to="." method="_on_exit_pressed"]

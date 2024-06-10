@@ -1,9 +1,10 @@
-[gd_resource type="Theme" load_steps=10 format=3 uid="uid://b1vv3jre6npvq"]
+[gd_resource type="Theme" load_steps=24 format=3 uid="uid://b1vv3jre6npvq"]
 
 [ext_resource type="Texture2D" uid="uid://blwqdpx16tlac" path="res://Imported Assets/UI/ButtonsText/ButtonText_Small_ROund.png" id="1_3r25i"]
 [ext_resource type="Texture2D" uid="uid://bw57rmfm2hlqd" path="res://Imported Assets/UI/ButtonsText/ButtonText_Small_Blue_Round.png" id="2_mhc3m"]
 [ext_resource type="Texture2D" uid="uid://bra11st7wp7u3" path="res://Imported Assets/UI/ButtonsText/ButtonText_OnOffBackground.png" id="3_cvu0a"]
 [ext_resource type="FontFile" uid="uid://dtdebvoxhhvdr" path="res://Imported Assets/Fonts/MorrisRomanBlack.ttf" id="4_fuwyn"]
+[ext_resource type="Texture2D" uid="uid://dc5amvfbfy0tb" path="res://Imported Assets/UI/BoxesBanners/Box_Blue_Rounded.png" id="4_n6jyc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gg5bp"]
 content_margin_left = 32.0
@@ -42,6 +43,37 @@ content_margin_right = 32.0
 content_margin_bottom = 8.0
 texture = ExtResource("3_cvu0a")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aaxjn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kv0ew"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7eoua"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vsgje"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fmatt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i5ae7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dnxcu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_td2ap"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r5431"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hq4oy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qy5qr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2wor3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mqtov"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+texture = ExtResource("4_n6jyc")
+
 [resource]
 default_font = ExtResource("4_fuwyn")
 default_font_size = 24
@@ -52,3 +84,16 @@ Button/styles/focus = SubResource("StyleBoxTexture_1hyiq")
 Button/styles/hover = SubResource("StyleBoxTexture_03tx3")
 Button/styles/normal = SubResource("StyleBoxTexture_75r1l")
 Button/styles/pressed = SubResource("StyleBoxTexture_m1ebo")
+CheckBox/styles/disabled = SubResource("StyleBoxEmpty_aaxjn")
+CheckBox/styles/focus = SubResource("StyleBoxEmpty_kv0ew")
+CheckBox/styles/hover = SubResource("StyleBoxEmpty_7eoua")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxEmpty_vsgje")
+CheckBox/styles/normal = SubResource("StyleBoxEmpty_fmatt")
+CheckBox/styles/pressed = SubResource("StyleBoxEmpty_i5ae7")
+CheckButton/styles/disabled = SubResource("StyleBoxEmpty_dnxcu")
+CheckButton/styles/focus = SubResource("StyleBoxEmpty_td2ap")
+CheckButton/styles/hover = SubResource("StyleBoxEmpty_r5431")
+CheckButton/styles/hover_pressed = SubResource("StyleBoxEmpty_hq4oy")
+CheckButton/styles/normal = SubResource("StyleBoxEmpty_qy5qr")
+CheckButton/styles/pressed = SubResource("StyleBoxEmpty_2wor3")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_mqtov")

@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjk5t1el4suya"]
+
+[ext_resource type="Theme" uid="uid://b1vv3jre6npvq" path="res://menu_buttons.tres" id="1_dw4vx"]
+[ext_resource type="Script" path="res://Scripts/UI/settings_menu.gd" id="2_h3f06"]
+
+[node name="Settings Menu" type="PanelContainer" node_paths=PackedStringArray("_default_focus_item")]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.5
+offset_top = -92.5
+offset_right = 146.5
+offset_bottom = 92.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_dw4vx")
+script = ExtResource("2_h3f06")
+_default_focus_item = NodePath("VBoxContainer/GridContainer/Camera Invert X")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Camera Invert X Label" type="Label" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Camera Invert X"
+
+[node name="Camera Invert X" type="CheckBox" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Camera Invert Y Label" type="Label" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Camera Invert Y"
+
+[node name="Camera Invert Y" type="CheckBox" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Volume Label" type="Label" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Volume"
+
+[node name="Volume" type="HSlider" parent="VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
+[node name="Close" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Close"
+
+[connection signal="toggled" from="VBoxContainer/GridContainer/Camera Invert X" to="." method="_on_camera_invert_x_toggled"]
+[connection signal="toggled" from="VBoxContainer/GridContainer/Camera Invert Y" to="." method="_on_camera_invert_y_toggled"]
+[connection signal="value_changed" from="VBoxContainer/GridContainer/Volume" to="." method="_on_volume_value_changed"]
+[connection signal="pressed" from="VBoxContainer/Close" to="." method="close"]
