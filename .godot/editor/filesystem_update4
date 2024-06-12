@@ -1,10 +1,13 @@
-res://Scenes/title.tscn
+res://Scenes/transition.tscn
 res://Imported Assets/Dungeon/dungeon_mesh_library.tres
 res://menu_buttons.tres
-res://Scripts/UI/menu.gd
-res://Scripts/UI/settings_menu.gd
+res://Scripts/transition.gd
 res://Scenes/game.tscn
+res://Scenes/title.tscn
+res://Scenes/room_3.tscn
+res://Scenes/character.tscn
+res://Scenes/room_1.tscn
+res://Scenes/room_2.tscn
+res://Scripts/Custom Resources/progress.gd
 res://Scripts/Managers/game_manager.gd
 res://Scripts/Managers/scene_manager.gd
-res://Scripts/Managers/title_manager.gd
-res://Scenes/settings_menu.tscn

@@ -1,6 +1,7 @@
 class_name SceneManager extends Node
 
 @export var _background_music : AudioStream
+@warning_ignore("unused_private_class_variable")
 @export var _settings_menu : Menu
 @export var _fade : ColorRect
 

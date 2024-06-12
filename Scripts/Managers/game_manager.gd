@@ -1,6 +1,14 @@
 extends SceneManager
 
 @onready var _pause_menu : Control = $"UI/Pause Menu"
+@onready var _current_level = $Room
+
+func load_level():
+	if _current_level:
+		await _fade.to_black()
+		_current_level.queue_free()
+	# load the next level
+	await _fade.to_clear()
 
 func toggle_pause():
 	get_tree().paused = !get_tree().paused

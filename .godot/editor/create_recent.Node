@@ -1,3 +1,6 @@
+Node
+CollisionShape3D
+Area3D
 CheckBox
 VBoxContainer
 Button
@@ -10,5 +13,3 @@ Panel
 AudioStreamPlayer
 ColorRect
 TextureRect
-CanvasLayer
-GridMap

@@ -102,6 +102,11 @@ pause={
 ]
 }
 
+[layer_names]
+
+3d_physics/layer_1="Terrain"
+3d_physics/layer_9="Player"
+
 [physics]
 
 3d/default_gravity=19.6

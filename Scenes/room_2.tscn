@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://blfhc806kuw0e"]
+[gd_scene load_steps=5 format=3 uid="uid://blfhc806kuw0e"]
 
 [ext_resource type="MeshLibrary" uid="uid://ixy0tpubfryo" path="res://Imported Assets/Dungeon/dungeon_mesh_library.tres" id="1_kc40b"]
 [ext_resource type="PackedScene" uid="uid://ioim4tdr1p6q" path="res://Imported Assets/Dungeon/pillar.gltf.glb" id="2_yqex7"]
+[ext_resource type="PackedScene" uid="uid://d1q3cm48sgxxi" path="res://Scenes/transition.tscn" id="3_mub08"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6dn7v"]
 
@@ -25,3 +26,11 @@ use_collision = true
 collision_layer = 2
 size = Vector3(21, 1, 19)
 material = SubResource("StandardMaterial3D_6dn7v")
+
+[node name="Transitions" type="Node" parent="."]
+
+[node name="To Room 1" parent="Transitions" instance=ExtResource("3_mub08")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, 4.5)
+
+[node name="To Room 3" parent="Transitions" instance=ExtResource("3_mub08")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0.5, -5.5)
