@@ -1,3 +1,4 @@
+Marker3D
 Node
 CollisionShape3D
 Area3D
@@ -12,4 +13,3 @@ PanelContainer
 Panel
 AudioStreamPlayer
 ColorRect
-TextureRect

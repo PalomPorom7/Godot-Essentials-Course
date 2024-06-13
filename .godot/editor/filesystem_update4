@@ -1,13 +1,15 @@
-res://Scenes/transition.tscn
-res://Imported Assets/Dungeon/dungeon_mesh_library.tres
+res://Scenes/Levels/room_2.tscn
 res://menu_buttons.tres
-res://Scripts/transition.gd
+res://Imported Assets/Dungeon/dungeon_mesh_library.tres
+res://Scenes/Levels/room_1.tscn
 res://Scenes/game.tscn
-res://Scenes/title.tscn
-res://Scenes/room_3.tscn
-res://Scenes/character.tscn
-res://Scenes/room_1.tscn
-res://Scenes/room_2.tscn
-res://Scripts/Custom Resources/progress.gd
+res://Scripts/level.gd
 res://Scripts/Managers/game_manager.gd
-res://Scripts/Managers/scene_manager.gd
+res://Scenes/title.tscn
+res://Scenes/transition.tscn
+res://Scenes/character.tscn
+res://Scenes/Levels/room_3.tscn
+res://Scripts/Custom Resources/progress.gd
+res://Scripts/transition.gd
+res://Scripts/player.gd
+res://Scripts/character.gd

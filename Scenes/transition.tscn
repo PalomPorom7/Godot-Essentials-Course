@@ -8,11 +8,15 @@ size = Vector3(4, 4, 4)
 [node name="Transition" type="Area3D"]
 collision_layer = 0
 collision_mask = 256
+monitoring = false
 monitorable = false
 script = ExtResource("1_f5yxb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 shape = SubResource("BoxShape3D_82yqv")
+
+[node name="Entrance" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

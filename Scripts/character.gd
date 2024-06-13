@@ -30,6 +30,9 @@ func _ready():
 	_min_jump_velocity = sqrt(_min_jump_height * _gravity * _mass * 2)
 	_max_jump_velocity = sqrt(_max_jump_height * _gravity * _mass * 2)
 
+func face_direction(forward_direction : float):
+	_rig.rotation.y = forward_direction
+
 func move(direction : Vector3):
 	_direction = direction
 

@@ -6,6 +6,10 @@ extends Node
 var _input_direction : Vector2
 var _move_direction : Vector3
 
+func face_direction(forward_direction : float):
+	_spring_arm.rotation.y = forward_direction + PI
+	_character.face_direction(forward_direction)
+
 func _input(event : InputEvent):
 	if event.is_action_pressed("pause"):
 		_gm.toggle_pause()

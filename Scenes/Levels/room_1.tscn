@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://dujtkfkjn3agj"]
+
+[ext_resource type="MeshLibrary" uid="uid://ixy0tpubfryo" path="res://Imported Assets/Dungeon/dungeon_mesh_library.tres" id="1_lyplh"]
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_stt6e"]
+[ext_resource type="PackedScene" uid="uid://dsua6ei8xm280" path="res://Imported Assets/Dungeon/sword_shield_gold.gltf.glb" id="2_nnueg"]
+[ext_resource type="PackedScene" uid="uid://d1q3cm48sgxxi" path="res://Scenes/transition.tscn" id="3_pbjas"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_06lu3"]
+
+[node name="Room" type="Node3D"]
+script = ExtResource("1_stt6e")
+
+[node name="Structure" type="GridMap" parent="."]
+mesh_library = ExtResource("1_lyplh")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(1, 65531, 56, 7, 65531, 44, 65531, 65531, 53, 15, 65531, 44, 21, 65531, 56, 3, 65533, 1441849, 65535, 65533, 1441849, 19, 65533, 1441849, 23, 65533, 1441849, 65529, 65533, 1048698, 65533, 65533, 1048698, 1, 65533, 1048698, 5, 65533, 1048698, 9, 65533, 1048698, 13, 65533, 1048698, 17, 65533, 1048698, 21, 65533, 1048698, 25, 65533, 1048698, 29, 65533, 1048698, 65529, 1, 1048698, 65533, 1, 1048698, 1, 1, 1048698, 5, 1, 1048698, 9, 1, 1048698, 13, 1, 1048698, 17, 1, 1048698, 21, 1, 1048698, 25, 1, 1048698, 29, 1, 1048698, 27, 65531, 655424, 65527, 65531, 54, 31, 65531, 54, 11, 65531, 655423, 65529, 5, 1048698, 65533, 5, 1048698, 1, 5, 1048698, 5, 5, 1048698, 9, 5, 1048698, 13, 5, 1048698, 17, 5, 1048698, 21, 5, 1048698, 25, 5, 1048698, 29, 5, 1048698, 21, 65529, 1048698, 1, 65529, 1048698, 21, 7, 72, 1, 7, 71, 11, 7, 58, 31, 7, 1441843, 31, 1, 1441838, 65527, 1, 1441837, 65527, 7, 655409, 65527, 5, 1048635, 65527, 65535, 1048635, 31, 65535, 1048635, 31, 5, 1048635, 27, 7, 53, 15, 7, 53, 65531, 7, 53, 17, 7, 59, 23, 7, 59, 65533, 7, 59, 5, 7, 43, 7, 7, 59)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="Decor" type="GridMap" parent="."]
+mesh_library = ExtResource("1_lyplh")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(131075, 65534, 157, 196607, 65534, 157, 131095, 65534, 157, 131091, 65534, 157, 27, 65531, 25, 65531, 65531, 27, 16, 7, 655366, 18, 7, 655372, 14, 7, 655378, 8, 7, 655372, 4, 7, 655378, 6, 7, 655366, 65534, 65532, 1441873, 29, 65533, 151, 131103, 65533, 1441925, 6, 1, 655488, 16, 1, 655488, 65527, 4, 1048710)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="sword_shield_gold_gltf" parent="Decor" instance=ExtResource("2_nnueg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 3, -4)
+
+[node name="Ceiling" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 5, 1.5)
+cast_shadow = 3
+use_collision = true
+collision_layer = 2
+collision_mask = 0
+size = Vector3(41, 1, 13)
+material = SubResource("StandardMaterial3D_06lu3")
+
+[node name="Transitions" type="Node" parent="."]
+
+[node name="To Room 2" parent="Transitions" instance=ExtResource("3_pbjas")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, -6.5)
+_connects_to = "room_2"
+
+[node name="To Room 3" parent="Transitions" instance=ExtResource("3_pbjas")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0.5, -6.5)
+_connects_to = "room_3"
