@@ -71,6 +71,7 @@ text = "New Game"
 
 [node name="Continue" type="Button" parent="Menu Buttons"]
 layout_mode = 2
+disabled = true
 text = "Continue"
 
 [node name="Settings" type="Button" parent="Menu Buttons"]

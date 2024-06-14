@@ -1,8 +1,8 @@
 class_name Settings extends Resource
 
-var camera_invert_x : bool
-var camera_invert_y : bool
-var volume : float
+@export var camera_invert_x : bool
+@export var camera_invert_y : bool
+@export var volume : float
 
 func _init():
 	camera_invert_x = false

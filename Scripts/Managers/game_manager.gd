@@ -11,6 +11,7 @@ func _ready():
 
 func load_level():
 	if _current_level:
+		File.save_game()
 		await _fade.to_black()
 		_current_level.queue_free()
 	_current_level = load("res://Scenes/Levels/" + File.progress.current_level + ".tscn").instantiate()
