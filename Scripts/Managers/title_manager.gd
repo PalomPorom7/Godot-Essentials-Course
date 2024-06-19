@@ -22,8 +22,9 @@ func _on_settings_pressed():
 	_settings_menu.open(_menu_buttons)
 
 func _on_credits_pressed():
-	print("Display credits.")
+	change_scenes("res://Scenes/credits.tscn")
 
 func _on_exit_pressed():
+	Music.fade_out()
 	await _fade.to_black()
 	get_tree().quit()

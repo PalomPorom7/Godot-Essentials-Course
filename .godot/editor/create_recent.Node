@@ -1,15 +1,14 @@
+Label
+VBoxContainer
 Marker3D
 Node
 CollisionShape3D
 Area3D
 CheckBox
-VBoxContainer
 Button
-Label
 GridContainer
 HSlider
 CheckButton
 PanelContainer
 Panel
 AudioStreamPlayer
-ColorRect

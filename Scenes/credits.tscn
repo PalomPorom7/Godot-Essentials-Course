@@ -1,0 +1,202 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqfi0uxh0vsni"]
+
+[ext_resource type="Script" path="res://Scripts/Managers/credits_manager.gd" id="1_nihr8"]
+[ext_resource type="AudioStream" uid="uid://12kfmcbvn482" path="res://Imported Assets/Music/Presents for the Kids.ogg" id="2_1uxkg"]
+[ext_resource type="Script" path="res://Scripts/UI/fade.gd" id="3_2tp1g"]
+[ext_resource type="FontFile" uid="uid://cal1olhubng48" path="res://Imported Assets/Fonts/Celtica-Book.ttf" id="3_gbocl"]
+[ext_resource type="FontFile" uid="uid://dtdebvoxhhvdr" path="res://Imported Assets/Fonts/MorrisRomanBlack.ttf" id="4_pogpt"]
+
+[node name="Credits" type="Control" node_paths=PackedStringArray("_fade")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nihr8")
+_background_music = ExtResource("2_1uxkg")
+_fade = NodePath("Fade")
+
+[node name="Scroll" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 3664.0
+grow_horizontal = 2
+theme_override_constants/separation = 256
+
+[node name="Game Design" type="VBoxContainer" parent="Scroll"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Scroll/Game Design"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_gbocl")
+theme_override_font_sizes/font_size = 64
+text = "Game Design"
+horizontal_alignment = 1
+
+[node name="Thomas" type="Label" parent="Scroll/Game Design"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_pogpt")
+theme_override_font_sizes/font_size = 32
+text = "Thomas Yanuziello"
+horizontal_alignment = 1
+
+[node name="Game Development" type="VBoxContainer" parent="Scroll"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Scroll/Game Development"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_gbocl")
+theme_override_font_sizes/font_size = 64
+text = "Game Development"
+horizontal_alignment = 1
+
+[node name="Thomas" type="Label" parent="Scroll/Game Development"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_pogpt")
+theme_override_font_sizes/font_size = 32
+text = "Thomas Yanuziello"
+horizontal_alignment = 1
+
+[node name="Programming" type="VBoxContainer" parent="Scroll"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Scroll/Programming"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_gbocl")
+theme_override_font_sizes/font_size = 64
+text = "Programming"
+horizontal_alignment = 1
+
+[node name="Thomas" type="Label" parent="Scroll/Programming"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_pogpt")
+theme_override_font_sizes/font_size = 32
+text = "Thomas Yanuziello"
+horizontal_alignment = 1
+
+[node name="Character Models" type="VBoxContainer" parent="Scroll"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Scroll/Character Models"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_gbocl")
+theme_override_font_sizes/font_size = 64
+text = "Character Models"
+horizontal_alignment = 1
+
+[node name="Kay" type="Label" parent="Scroll/Character Models"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_pogpt")
+theme_override_font_sizes/font_size = 32
+text = "Kay Lousberg"
+horizontal_alignment = 1
+
+[node name="Animations" type="VBoxContainer" parent="Scroll"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Scroll/Animations"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_gbocl")
+theme_override_font_sizes/font_size = 64
+text = "Animations"
+horizontal_alignment = 1
+
+[node name="Kay" type="Label" parent="Scroll/Animations"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_pogpt")
+theme_override_font_sizes/font_size = 32
+text = "Kay Lousberg"
+horizontal_alignment = 1
+
+[node name="Environment Models" type="VBoxContainer" parent="Scroll"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Scroll/Environment Models"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_gbocl")
+theme_override_font_sizes/font_size = 64
+text = "Environment Models"
+horizontal_alignment = 1
+
+[node name="Kay" type="Label" parent="Scroll/Environment Models"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_pogpt")
+theme_override_font_sizes/font_size = 32
+text = "Kay Lousberg"
+horizontal_alignment = 1
+
+[node name="User Interface" type="VBoxContainer" parent="Scroll"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Scroll/User Interface"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_gbocl")
+theme_override_font_sizes/font_size = 64
+text = "User Interface"
+horizontal_alignment = 1
+
+[node name="Penzilla" type="Label" parent="Scroll/User Interface"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_pogpt")
+theme_override_font_sizes/font_size = 32
+text = "Penzilla"
+horizontal_alignment = 1
+
+[node name="Music" type="VBoxContainer" parent="Scroll"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Scroll/Music"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_gbocl")
+theme_override_font_sizes/font_size = 64
+text = "Music"
+horizontal_alignment = 1
+
+[node name="Eric" type="Label" parent="Scroll/Music"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_pogpt")
+theme_override_font_sizes/font_size = 32
+text = "Eric the Funny Baron"
+horizontal_alignment = 1
+
+[node name="Thank you" type="Label" parent="Scroll"]
+custom_minimum_size = Vector2(0, 720)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_pogpt")
+theme_override_font_sizes/font_size = 64
+text = "Thank you for playing!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fade" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("3_2tp1g")

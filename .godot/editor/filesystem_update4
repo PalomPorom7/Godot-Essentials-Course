@@ -1,15 +1,12 @@
-res://Scenes/title.tscn
 res://menu_buttons.tres
 res://Imported Assets/Dungeon/dungeon_mesh_library.tres
-res://Scripts/Autoloads/file.gd
-res://Scripts/UI/settings_menu.gd
 res://Scripts/Managers/title_manager.gd
-res://Scripts/Managers/game_manager.gd
+res://Scenes/credits.tscn
+res://Scripts/Managers/credits_manager.gd
 res://Scenes/game.tscn
+res://Scenes/title.tscn
 res://Scenes/transition.tscn
 res://Scenes/character.tscn
 res://Scenes/Levels/room_1.tscn
 res://Scenes/Levels/room_2.tscn
 res://Scenes/Levels/room_3.tscn
-res://Scripts/Custom Resources/settings.gd
-res://Scripts/Custom Resources/progress.gd
