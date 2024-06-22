@@ -1,1 +1,1 @@
-# Godot 3D Course
+# Godot Essentials Course
